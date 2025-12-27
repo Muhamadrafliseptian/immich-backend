@@ -7,11 +7,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-  networks:
+    networks:
       - app-network
       
 
-  nginx:
+    nginx:
     image: nginx:alpine
     container_name: nginx-reverse
     ports:
