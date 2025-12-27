@@ -1,17 +1,15 @@
 version: "3.9"
 
 services:
-
-    api:
+  api:
     container_name: nest-api
     build:
       context: .
       dockerfile: Dockerfile
     networks:
       - app-network
-      
 
-    nginx:
+  nginx:
     image: nginx:alpine
     container_name: nginx-reverse
     ports:
